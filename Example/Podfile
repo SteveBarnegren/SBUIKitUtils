@@ -1,6 +1,0 @@
-use_frameworks!
-target 'SBUIKitUtils_Tests' do
-  pod 'SBUIKitUtils', :path => '../'
-  
-  
-end
