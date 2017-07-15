@@ -1,0 +1,22 @@
+{
+  "name": "SBUIKitUtils",
+  "version": "0.1.0",
+  "summary": "A short description of SBUIKitUtils.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/steve.barnegren@gmail.com/SBUIKitUtils",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "steve.barnegren@gmail.com": "steve.barnegren@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/steve.barnegren@gmail.com/SBUIKitUtils.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SBUIKitUtils/Classes/**/*"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - SBUIKitUtils (0.1.0)
+
+DEPENDENCIES:
+  - SBUIKitUtils (from `../`)
+
+EXTERNAL SOURCES:
+  SBUIKitUtils:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SBUIKitUtils: e4d1cc31e43ece11dab651f7deebad821e63168e
+
+PODFILE CHECKSUM: be0238363446a901884860e892c47a04666d36f8
+
+COCOAPODS: 1.2.1

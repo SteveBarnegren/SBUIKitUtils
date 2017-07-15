@@ -1,0 +1,6 @@
+framework module SBUIKitUtils {
+  umbrella header "SBUIKitUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}
