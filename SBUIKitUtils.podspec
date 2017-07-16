@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SBUIKitUtils'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A collection of UIKit utils and categories'
 
   s.description      = <<-DESC
