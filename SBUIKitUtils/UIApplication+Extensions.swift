@@ -11,8 +11,9 @@ import UIKit
 
 public extension UIApplication {
     
+    // MARK: - Get root view controller
+    
     public var rootViewController: UIViewController {
         return delegate!.window!!.rootViewController!
     }
-    
 }
