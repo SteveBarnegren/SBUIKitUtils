@@ -83,10 +83,10 @@
 		67993BA61F1A393C00F1CF95 /* SBUIKitUtils */ = {
 			isa = PBXGroup;
 			children = (
+				67ECD0442107C88000CD9CF2 /* Categories */,
+				67ECD0452107C8A300CD9CF2 /* Views */,
 				67993BA71F1A393C00F1CF95 /* SBUIKitUtils.h */,
 				67993BA81F1A393C00F1CF95 /* Info.plist */,
-				67993BBE1F1A3A6700F1CF95 /* Categories */,
-				67993BC61F1A3B6F00F1CF95 /* Views */,
 			);
 			path = SBUIKitUtils;
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 			path = SBUIKitUtilsTests;
 			sourceTree = "<group>";
 		};
-		67993BBE1F1A3A6700F1CF95 /* Categories */ = {
+		67ECD0442107C88000CD9CF2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				67993BBF1F1A3AA500F1CF95 /* UIApplication+Extensions.swift */,
@@ -108,16 +108,16 @@
 				67993BC11F1A3AC800F1CF95 /* UIView+Extensions.swift */,
 				67993BC41F1A3B2500F1CF95 /* CGRect+Extensions.swift */,
 			);
-			name = Categories;
+			path = Categories;
 			sourceTree = "<group>";
 		};
-		67993BC61F1A3B6F00F1CF95 /* Views */ = {
+		67ECD0452107C8A300CD9CF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				67993BC71F1A3B8600F1CF95 /* SBDelegatingButton.swift */,
 				67993BCA1F1A3C5B00F1CF95 /* SBOverlayActivityIndicatorViewController.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
