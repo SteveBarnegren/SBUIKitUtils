@@ -24,5 +24,6 @@ My personal UIKit utilities library. Collection of utility classes and categorie
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'SBUIKitUtils/**/*'
+  s.swift_version = '4.1'
   s.frameworks = 'UIKit'
 end
