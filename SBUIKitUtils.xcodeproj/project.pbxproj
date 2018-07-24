@@ -16,6 +16,7 @@
 		67993BC51F1A3B2500F1CF95 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67993BC41F1A3B2500F1CF95 /* CGRect+Extensions.swift */; };
 		67993BC81F1A3B8600F1CF95 /* SBDelegatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67993BC71F1A3B8600F1CF95 /* SBDelegatingButton.swift */; };
 		67993BCB1F1A3C5B00F1CF95 /* SBOverlayActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67993BCA1F1A3C5B00F1CF95 /* SBOverlayActivityIndicatorViewController.swift */; };
+		67ECD0472107CA5700CD9CF2 /* DequeuableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ECD0462107CA5700CD9CF2 /* DequeuableTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		67993BC41F1A3B2500F1CF95 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		67993BC71F1A3B8600F1CF95 /* SBDelegatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDelegatingButton.swift; sourceTree = "<group>"; };
 		67993BCA1F1A3C5B00F1CF95 /* SBOverlayActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBOverlayActivityIndicatorViewController.swift; sourceTree = "<group>"; };
+		67ECD0462107CA5700CD9CF2 /* DequeuableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeuableTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +85,11 @@
 		67993BA61F1A393C00F1CF95 /* SBUIKitUtils */ = {
 			isa = PBXGroup;
 			children = (
+				67ECD0482107CAA000CD9CF2 /* Protocols */,
+				67ECD0442107C88000CD9CF2 /* Categories */,
+				67ECD0452107C8A300CD9CF2 /* Views */,
 				67993BA71F1A393C00F1CF95 /* SBUIKitUtils.h */,
 				67993BA81F1A393C00F1CF95 /* Info.plist */,
-				67993BBE1F1A3A6700F1CF95 /* Categories */,
-				67993BC61F1A3B6F00F1CF95 /* Views */,
 			);
 			path = SBUIKitUtils;
 			sourceTree = "<group>";
@@ -100,7 +103,7 @@
 			path = SBUIKitUtilsTests;
 			sourceTree = "<group>";
 		};
-		67993BBE1F1A3A6700F1CF95 /* Categories */ = {
+		67ECD0442107C88000CD9CF2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				67993BBF1F1A3AA500F1CF95 /* UIApplication+Extensions.swift */,
@@ -108,16 +111,24 @@
 				67993BC11F1A3AC800F1CF95 /* UIView+Extensions.swift */,
 				67993BC41F1A3B2500F1CF95 /* CGRect+Extensions.swift */,
 			);
-			name = Categories;
+			path = Categories;
 			sourceTree = "<group>";
 		};
-		67993BC61F1A3B6F00F1CF95 /* Views */ = {
+		67ECD0452107C8A300CD9CF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				67993BC71F1A3B8600F1CF95 /* SBDelegatingButton.swift */,
 				67993BCA1F1A3C5B00F1CF95 /* SBOverlayActivityIndicatorViewController.swift */,
 			);
-			name = Views;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		67ECD0482107CAA000CD9CF2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				67ECD0462107CA5700CD9CF2 /* DequeuableTableViewCell.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 			buildConfigurationList = 67993BBB1F1A393C00F1CF95 /* Build configuration list for PBXNativeTarget "SBUIKitUtilsTests" */;
 			buildPhases = (
 				67993BA91F1A393C00F1CF95 /* Sources */,
+				67ECD0422107C44D00CD9CF2 /* Swift Lint */,
 				67993BAA1F1A393C00F1CF95 /* Frameworks */,
 				67993BAB1F1A393C00F1CF95 /* Resources */,
 			);
@@ -177,16 +189,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Steve Barnegren";
 				TargetAttributes = {
 					67993BA31F1A393C00F1CF95 = {
 						CreatedOnToolsVersion = 8.3;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 					67993BAC1F1A393C00F1CF95 = {
 						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -226,6 +239,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		67ECD0422107C44D00CD9CF2 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		67993B9F1F1A393C00F1CF95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -237,6 +267,7 @@
 				67993BC01F1A3AA500F1CF95 /* UIApplication+Extensions.swift in Sources */,
 				67993BCB1F1A3C5B00F1CF95 /* SBOverlayActivityIndicatorViewController.swift in Sources */,
 				6782D8871F1EA22F00833FCB /* UIDevice+Extensions.swift in Sources */,
+				67ECD0472107CA5700CD9CF2 /* DequeuableTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,15 +300,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -323,15 +362,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -376,7 +423,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -395,7 +442,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.SBUIKitUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -407,7 +454,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.SBUIKitUtilsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -419,7 +466,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.SBUIKitUtilsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

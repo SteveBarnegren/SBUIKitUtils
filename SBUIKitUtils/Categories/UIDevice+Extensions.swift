@@ -25,4 +25,3 @@ extension UIDevice {
         return self.userInterfaceIdiom == .tv
     }
 }
-

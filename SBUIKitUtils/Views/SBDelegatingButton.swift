@@ -30,14 +30,14 @@ public class SBDelegatingButton: UIButton {
     
     // MARK: - Properties
     
-    public var touchDownHandler: () -> () = {}
-    public var touchUpInsideHandler: () -> () = {}
-    public var touchUpOutsideHandler: () -> () = {}
-    public var didHighlightHandler: () -> () = {}
-    public var didUnhighlightHandler: () -> () = {}
+    public var touchDownHandler: () -> Void = {}
+    public var touchUpInsideHandler: () -> Void = {}
+    public var touchUpOutsideHandler: () -> Void = {}
+    public var didHighlightHandler: () -> Void = {}
+    public var didUnhighlightHandler: () -> Void = {}
     
     override public var isHighlighted: Bool {
-        didSet{
+        didSet {
             if isHighlighted != oldValue {
                 highlightChanged()
             }
@@ -61,7 +61,7 @@ public class SBDelegatingButton: UIButton {
         touchUpOutsideHandler()
     }
     
-    @objc private func highlightChanged(){
+    @objc private func highlightChanged() {
         //print("Highlight changed")
         isHighlighted ? didHighlightHandler() : didUnhighlightHandler()
     }

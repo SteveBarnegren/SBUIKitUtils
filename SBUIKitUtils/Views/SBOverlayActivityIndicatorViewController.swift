@@ -20,7 +20,8 @@ public class SBOverlayActivityIndicatorViewController: UIViewController {
         return overlayOnViewController(rootViewController)
     }
     
-    public static func overlayOnViewController(_ parentViewController: UIViewController) -> SBOverlayActivityIndicatorViewController {
+    public static func overlayOnViewController(_ parentViewController: UIViewController)
+        -> SBOverlayActivityIndicatorViewController {
         
         let activityViewController = SBOverlayActivityIndicatorViewController(nibName: nil, bundle: nil)
         
@@ -29,7 +30,7 @@ public class SBOverlayActivityIndicatorViewController: UIViewController {
         
         activityViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        [NSLayoutAttribute.top, .bottom, .left, .right].forEach{
+        [NSLayoutAttribute.top, .bottom, .left, .right].forEach {
             let constraint = NSLayoutConstraint(item: activityViewController.view,
                                                 attribute: $0,
                                                 relatedBy: .equal,
@@ -109,10 +110,10 @@ public class SBOverlayActivityIndicatorViewController: UIViewController {
         
         UIView.animate(withDuration: 0.6, delay: 0.0, options: [.curveEaseInOut], animations: {
             self.view.backgroundColor = UIColor.clear
-        }) { (finished) in
+        }, completion: ({ _ in
             self.removeFromParentViewController()
             self.view.removeFromSuperview()
-        }
+        }))
     }
     
 }
