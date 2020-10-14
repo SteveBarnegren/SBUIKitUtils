@@ -12,10 +12,10 @@ import UIKit
 public extension UIView {
     
     public func sendToBack() {
-        superview?.sendSubview(toBack: self)
+        superview?.sendSubviewToBack(self)
     }
     
     public func bringToFront() {
-        superview?.bringSubview(toFront: self)
+        superview?.bringSubviewToFront(self)
     }
 }

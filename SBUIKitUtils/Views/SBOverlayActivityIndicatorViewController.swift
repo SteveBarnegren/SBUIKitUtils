@@ -25,13 +25,13 @@ public class SBOverlayActivityIndicatorViewController: UIViewController {
         
         let activityViewController = SBOverlayActivityIndicatorViewController(nibName: nil, bundle: nil)
         
-        parentViewController.addChildViewController(activityViewController)
+        parentViewController.addChild(activityViewController)
         parentViewController.view.addSubview(activityViewController.view)
         
         activityViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        [NSLayoutAttribute.top, .bottom, .left, .right].forEach {
-            let constraint = NSLayoutConstraint(item: activityViewController.view,
+        [NSLayoutConstraint.Attribute.top, .bottom, .left, .right].forEach {
+            let constraint = NSLayoutConstraint(item: activityViewController.view!,
                                                 attribute: $0,
                                                 relatedBy: .equal,
                                                 toItem: parentViewController.view,
@@ -46,7 +46,7 @@ public class SBOverlayActivityIndicatorViewController: UIViewController {
     
     // MARK: - Properties
     
-    private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+    private let activityIndicator = UIActivityIndicatorView(style: .white)
     private var isFirstAppearance = true
     
     // MARK: - UIViewController
@@ -111,7 +111,7 @@ public class SBOverlayActivityIndicatorViewController: UIViewController {
         UIView.animate(withDuration: 0.6, delay: 0.0, options: [.curveEaseInOut], animations: {
             self.view.backgroundColor = UIColor.clear
         }, completion: ({ _ in
-            self.removeFromParentViewController()
+            self.removeFromParent()
             self.view.removeFromSuperview()
         }))
     }
