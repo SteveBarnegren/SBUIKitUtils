@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol DequeuableTableViewCell: class {
     static var nibName: String? {get}
