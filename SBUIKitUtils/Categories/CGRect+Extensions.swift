@@ -11,19 +11,19 @@ import UIKit
 
 public extension CGRect {
     
-    public var shortestSide: CGFloat {
+    var shortestSide: CGFloat {
         return min(bounds.size.width, bounds.size.height)
     }
     
-    public var longestSide: CGFloat {
+    var longestSide: CGFloat {
         return max(bounds.size.width, bounds.size.height)
     }
     
-    public var bounds: CGRect {
+    var bounds: CGRect {
         return CGRect(x: 0, y: 0, width: size.width, height: size.height)
     }
     
-    public var aspectFittingSquare: CGRect {
+    var aspectFittingSquare: CGRect {
         
         let shortSide = min(size.width, size.height)
         
@@ -33,7 +33,7 @@ public extension CGRect {
                       height: shortSide)
     }
     
-    public var aspectFillingSquare: CGRect {
+    var aspectFillingSquare: CGRect {
         
         let longSide = max(size.width, size.height)
         
